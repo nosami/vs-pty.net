@@ -35,14 +35,15 @@ namespace Pty.Net.Unix
 
             this.controller = controller;
             this.pid = pid;
-            var childWatcherThread = new Thread(this.ChildWatcherThreadProc)
-            {
-                IsBackground = true,
-                Priority = ThreadPriority.Lowest,
-                Name = $"Watcher thread for child process {pid}",
-            };
 
-            childWatcherThread.Start();
+            //var childWatcherThread = new Thread(this.ChildWatcherThreadProc)
+            //{
+            //    IsBackground = true,
+            //    Priority = ThreadPriority.Lowest,
+            //    Name = $"Watcher thread for child process {pid}",
+            //};
+
+            //childWatcherThread.Start();
         }
 
         /// <inheritdoc/>
